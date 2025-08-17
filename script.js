@@ -4,13 +4,13 @@ botaoMostraPalavras.addEventListener('click', destacaPalavrasChave);
 
 function destacaPalavrasChave() {
      const texto = document.querySelector('#entrada-de-texto').value;
-    const campoResultado = document.querySelector('#resultado-palavrachave');
-    const palavrasChave = processatexto("texto");
+    const campoResultado = document.querySelector('#indicador-palavrachave');
+    const palavrasChave = analisatexto("texto");
 
     campoResultado.textContent=palavrasChave.join(", ");
 }
 
-function processaTexto(texto){
+function analisaTexto(texto){
     let palavras = texto.split(/\P{L}+/u);
 
     let frequencias = {};
